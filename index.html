@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>NOIRA N1 — Sessizliği duy.</title>
+    <meta
+      name="description"
+      content="NOIRA N1: 40 saat pil, hibrit aktif gürültü engelleme ve stüdyo hassasiyetinde ses. Kablosuz gürültü engelleyici kulaklık."
+    />
+    <meta name="theme-color" content="#050506" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23050506'/%3E%3Cpath d='M8 22V16a8 8 0 0 1 16 0v6' fill='none' stroke='%239cccff' stroke-width='2.2' stroke-linecap='round'/%3E%3Crect x='6' y='16' width='5' height='9' rx='2.2' fill='%239cccff'/%3E%3Crect x='21' y='16' width='5' height='9' rx='2.2' fill='%239cccff'/%3E%3C/svg%3E" />
+    <link rel="preload" href="models/headphones.glb" as="fetch" crossorigin />
+    <link rel="preload" href="hdr/studio.hdr" as="fetch" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fontlar render'ı bloklamaz; yüklenene kadar sistem fallback'i (font-display: swap) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@300;400;500&display=swap" /></noscript>
+  </head>
+  <body>
+    <a class="skip-link" href="#ses">İçeriğe geç</a>
+
+    <div id="loader" class="loader" role="status" aria-live="polite">
+      <div class="loader__inner">
+        <div class="loader__logo">NOIRA</div>
+        <div class="loader__bar" aria-hidden="true"><span id="loader-bar"></span></div>
+        <div class="loader__pct"><span id="loader-pct">0</span><small>%</small></div>
+        <span class="sr-only">Yükleniyor</span>
+      </div>
+    </div>
+
+    <canvas id="gl" class="stage" role="img" aria-label=""></canvas>
+    <div id="veil" class="veil" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header id="nav" class="nav">
+      <a class="nav__logo" href="#top" aria-label="NOIRA — başa dön">NOIRA</a>
+      <nav class="nav__links" aria-label="Ana gezinme" id="nav-links"></nav>
+      <a class="btn btn--sm btn--primary" id="nav-cta" href="#teknik"></a>
+    </header>
+
+    <nav class="dots" aria-label="Bölümler" id="dots"></nav>
+
+    <main id="app"><!--HERO--></main>
+
+    <div id="gallery-ui" class="gallery-ui" hidden>
+      <p class="gallery-ui__hint" id="gallery-hint"></p>
+      <button class="btn btn--ghost" id="gallery-close" type="button"></button>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

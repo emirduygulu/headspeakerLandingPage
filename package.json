@@ -1,0 +1,23 @@
+{
+  "name": "noira-n1",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "optimize": "gltf-transform optimize assets/headphones.original.glb public/models/headphones.glb --compress meshopt --texture-compress webp --texture-size 2048 --simplify-error 0.0002"
+  },
+  "dependencies": {
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "lil-gui": "^0.21.0",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@gltf-transform/cli": "^4.5.1",
+    "sharp": "^0.35.5",
+    "vite": "^8.3.1"
+  }
+}
